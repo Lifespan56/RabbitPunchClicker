@@ -17,10 +17,10 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
-        controller.enabled = true;
-        statHandler.enabled = true;
-        animContorller.enabled = true;
-        calculator.enabled = true;
+        //controller.enabled = true;
+        //statHandler.enabled = true;
+        //animContorller.enabled = true;
+        //calculator.enabled = true;
     }
 }
 

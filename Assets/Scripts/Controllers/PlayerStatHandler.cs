@@ -19,10 +19,9 @@ public class PlayerStatHandler : MonoBehaviour
     [SerializeField] private int curAgility;
     [SerializeField] public int curCriticalChance { get; private set; }
 
-    public PlayerAnimContorller playerAnimController;
     private void Awake()
     {
-        playerAnimController = PlayerManager.Instance.Player.animContorller;
+
     }
 
     private void Start()
@@ -51,7 +50,6 @@ public class PlayerStatHandler : MonoBehaviour
         //힘이 오르는데 왜 빨라지냐는 의문이 있는가?
         //팔굽혀펴기를 예로 들면 근육이 많은 사람이 마른 사람보다 빠르다
         //근력이 민첩함의 기반이 되는 것이다
-        playerAnimController.Anim_AttackSpeed(1f + (float)curStrength / 100 + (float)curAgility / 50);
 
         StartCoroutine("StaminaRecovery");
     }
@@ -64,6 +62,13 @@ public class PlayerStatHandler : MonoBehaviour
             curStamina = Mathf.Max(curStamina += curStamina_Recovery_PerTime, curStamina_Max);
         }
     }
+
     //스탯변동시 갱신
+    public float GetForAnim_AttackSpeed()
+    {
+        return (1f + (float)curStrength / 100 + (float)curAgility / 50);
+    }
+    
+
 
 }

@@ -9,13 +9,20 @@ public class Calculator : MonoBehaviour
     private int beforeInt;
     private void Awake()
     {
-        playerStatHandler = PlayerManager.Instance.Player.statHandler;
+        playerStatHandler = GetComponent<PlayerStatHandler>();
     }
     private void Start()
     {
         atkTypeCount = (int)Enums.BasicAttackType.Count;
     }
-    public int GetNormalForAnim()//PlayerAnimContorller.cs에서 호출
+    public bool GetForAnim_Critical()//PlayerAnimContorller.cs에서 호출
+    {
+        int rand;
+        rand = Random.Range(0, 101);
+        //단순히 백분율 0~100으로 랜덤하게 나온 숫자가 현재 크리티컬확률 범위내라면
+        return playerStatHandler.curCriticalChance >= rand;
+    }
+    public int GetForAnim_Normal()//PlayerAnimContorller.cs에서 호출
     {
         int rand;
 
@@ -27,12 +34,6 @@ public class Calculator : MonoBehaviour
         beforeInt = rand;
         return rand;
     }
+    
 
-    public bool GetCriticalForAnim()//PlayerAnimContorller.cs에서 호출
-    {
-        int rand;
-        rand = Random.Range(0, 101);
-        //단순히 백분율 0~100으로 랜덤하게 나온 숫자가 현재 크리티컬확률 범위내라면
-        return playerStatHandler.curCriticalChance >= rand;
-    }
 }

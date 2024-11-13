@@ -5,31 +5,31 @@ public class PlayerAnimContorller : MonoBehaviour
     private Animator animator;
     private Enums.BasicAttackType atkType;
     public Calculator calculator;
-    public PlayerInputController inputController;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        animator = gameObject.GetComponent<Animator>();
         calculator = PlayerManager.Instance.Player.calculator;
-        inputController = PlayerManager.Instance.Player.controller;
     }
 
     private void Start()
     {
-        inputController.OnBasicAttack += Anim_Attack;
+        PlayerManager.Instance.Player.controller.OnBasicAttack += Anim_Attack;
         //전투태세 전환 다른곳에서 해야함
         animator.SetBool("IsFight", true);
+        //스탯변동시 업데이트 되어야함
+        animator.SetFloat("AttackSpeed", 1f);
     }
 
     private void Anim_Attack()
     {
-        if(calculator.GetCriticalForAnim())//크리인가 부터 판정
+        if(calculator.GetForAnim_Critical())//크리인가 부터 판정
         {
             animator.SetTrigger("IsCritical");
         }
         else//크리가 아니면 공격4종중 하나
         {
-            animator.SetInteger("AttackType", calculator.GetNormalForAnim());
+            animator.SetInteger("AttackType", calculator.GetForAnim_Normal());
             animator.SetTrigger("IsInput");
         }  
     }
