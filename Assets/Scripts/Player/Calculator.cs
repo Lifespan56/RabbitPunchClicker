@@ -3,13 +3,16 @@ using Random = UnityEngine.Random;
 
 public class Calculator : MonoBehaviour
 {
-    public PlayerStatHandler playerStatHandler;
+    //전처리가 필요한 함수의 계산을 여기서 해볼까
+    private PlayerStatHandler playerStatHandler;
+    private UI_ScoreBoard UI_scoreBoard;
 
     private int atkTypeCount;
     private int beforeInt;
     private void Awake()
     {
         playerStatHandler = GetComponent<PlayerStatHandler>();
+        UI_scoreBoard = PlayerManager.Instance.UI_ScoreBoard;
     }
     private void Start()
     {
@@ -34,6 +37,11 @@ public class Calculator : MonoBehaviour
         beforeInt = rand;
         return rand;
     }
-    
 
+    public void AddScore(int multiply)//PlayerAnimContorller.cs Anim_Attack()에서 호출
+    {
+        int amount = playerStatHandler.curStrength * multiply;
+        UI_scoreBoard.ScoreUpdate(amount);
+    }
+    
 }

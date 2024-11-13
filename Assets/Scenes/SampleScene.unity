@@ -322,6 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38de2ae2c8e111545abeef9f5c2e670a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsProgress: 0
 --- !u!114 &41987951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,8 +345,9 @@ MonoBehaviour:
   curStamina_Consum_PerAttack: 0
   curStamina_Recovery_Time: 0
   curStamina_Recovery_PerTime: 0
-  curStrength: 0
+  <curStrength>k__BackingField: 0
   curAgility: 0
+  <curCriticalChance>k__BackingField: 0
 --- !u!114 &41987952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8869d70ab7766fa4ba05393617472400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatHandler: {fileID: 0}
 --- !u!114 &41987953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,7 +495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ef68cc45079be438620e3f612e316e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  calculator: {fileID: 0}
 --- !u!1 &277963398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1290,7 @@ GameObject:
   - component: {fileID: 1436543707}
   - component: {fileID: 1436543706}
   - component: {fileID: 1436543705}
+  - component: {fileID: 1436543708}
   m_Layer: 5
   m_Name: ScoreBoard
   m_TagString: Untagged
@@ -1380,6 +1381,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1436543708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436543703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148d09a8e211a404aa131cd9e315472e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1488875805
 GameObject:
   m_ObjectHideFlags: 0

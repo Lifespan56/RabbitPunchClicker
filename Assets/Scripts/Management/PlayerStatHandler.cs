@@ -15,9 +15,10 @@ public class PlayerStatHandler : MonoBehaviour
     [SerializeField] private float curStamina_Recovery_Time;
     [SerializeField] private int curStamina_Recovery_PerTime;
 
-    [SerializeField] private int curStrength;
+
+    [field: SerializeField] public int curStrength { get; private set; }
     [SerializeField] private int curAgility;
-    [SerializeField] public int curCriticalChance { get; private set; }
+    [field: SerializeField] public int curCriticalChance { get; private set; }
 
     private void Awake()
     {
@@ -59,12 +60,12 @@ public class PlayerStatHandler : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(curStamina_Recovery_Time);
-            curStamina = Mathf.Max(curStamina += curStamina_Recovery_PerTime, curStamina_Max);
+            curStamina = Mathf.Min(curStamina += curStamina_Recovery_PerTime, curStamina_Max);
         }
     }
 
     //스탯변동시 갱신
-    public float GetForAnim_AttackSpeed()
+    public float GetForAnim_AttackSpeed()//호출하는곳 없음
     {
         return (1f + (float)curStrength / 100 + (float)curAgility / 50);
     }

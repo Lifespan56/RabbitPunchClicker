@@ -15,12 +15,6 @@ public class Player : MonoBehaviour
         animContorller = GameObject.Find("Sprite_Main").GetComponent<PlayerAnimContorller>();
         calculator = gameObject.GetComponent<Calculator>();
     }
-    private void Start()
-    {
-        //controller.enabled = true;
-        //statHandler.enabled = true;
-        //animContorller.enabled = true;
-        //calculator.enabled = true;
-    }
+
 }
 

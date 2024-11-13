@@ -32,11 +32,17 @@ public class PlayerManager : MonoBehaviour
     }
 
     private Player _Player;
-
     public Player Player
     { 
         get { return _Player;}
         set { _Player = value; }
+    }
+
+    private UI_ScoreBoard _UI_ScoreBoard;
+    public UI_ScoreBoard UI_ScoreBoard
+    {
+        get { return _UI_ScoreBoard; }
+        set { _UI_ScoreBoard = value; }
     }
 }
 
