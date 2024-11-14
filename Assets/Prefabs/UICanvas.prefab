@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 4539199633873665049}
   - component: {fileID: 566043113192608150}
   - component: {fileID: 3172128312406075337}
+  - component: {fileID: 5918310970071882735}
   m_Layer: 0
   m_Name: Strength-
   m_TagString: Untagged
@@ -516,6 +517,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5918310970071882735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2216688347037412193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ea44318368f3046b725fb39e9f3980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2712006000494976565
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +541,7 @@ GameObject:
   - component: {fileID: 2496232461793890021}
   - component: {fileID: 6822922518892575379}
   - component: {fileID: 3282715955448635062}
+  - component: {fileID: 4282114729752384958}
   m_Layer: 0
   m_Name: Strength+
   m_TagString: Untagged
@@ -649,6 +663,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4282114729752384958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2712006000494976565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809547df7b4bcda4ba8bcae8a631e161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2829294151146600406
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,6 +959,7 @@ GameObject:
   - component: {fileID: 7684465721453463449}
   - component: {fileID: 1151323647721119747}
   - component: {fileID: 4369029258954582644}
+  - component: {fileID: 1650319880761604434}
   m_Layer: 0
   m_Name: Sta_Recover+
   m_TagString: Untagged
@@ -1054,6 +1081,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1650319880761604434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3684949402275387848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d854c1117bc8e9f43b77b5a9af0e5986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3815367281212751180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1578,7 @@ GameObject:
   - component: {fileID: 374763964704249742}
   - component: {fileID: 2870426636881153253}
   - component: {fileID: 8312881047623502982}
+  - component: {fileID: 35192748245924308}
   m_Layer: 0
   m_Name: Agility-
   m_TagString: Untagged
@@ -1660,6 +1700,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &35192748245924308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5275696878517566125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262d6823f9f0ead47ad39f579488b7b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6293930016190066135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,6 +2008,7 @@ GameObject:
   - component: {fileID: 2389110362807197141}
   - component: {fileID: 9177582424019452635}
   - component: {fileID: 7470777536600231107}
+  - component: {fileID: 1158261503420311561}
   m_Layer: 0
   m_Name: Sta_Recover-
   m_TagString: Untagged
@@ -2077,6 +2130,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1158261503420311561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811187532062084993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455b1901d23e1384b979a979ed089053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6903016198975843540
 GameObject:
   m_ObjectHideFlags: 0
@@ -2684,6 +2749,7 @@ GameObject:
   - component: {fileID: 3706860259421346267}
   - component: {fileID: 7401332985510002741}
   - component: {fileID: 5851279339787615474}
+  - component: {fileID: 8520406653263721924}
   m_Layer: 0
   m_Name: Agility+
   m_TagString: Untagged
@@ -2805,6 +2871,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8520406653263721924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7932844159756741877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1cd1ecffe8a0b4fbb79bfa0bb03cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8111038638684590556
 GameObject:
   m_ObjectHideFlags: 0

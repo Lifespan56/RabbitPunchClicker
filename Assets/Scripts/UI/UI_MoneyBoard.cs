@@ -17,7 +17,7 @@ public class UI_MoneyBoard : MonoBehaviour
         textMeshPro.text = Money.ToString();
     }
 
-    public void ScoreUpdate(int addScore)//Calculator AddScore(int)에서 호출
+    public void MoneyUpdate(int addScore)//호출없음
     {
         Money += addScore;
         textMeshPro.text = Money.ToString();
