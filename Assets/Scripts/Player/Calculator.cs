@@ -12,11 +12,11 @@ public class Calculator : MonoBehaviour
     private void Awake()
     {
         playerStatHandler = GetComponent<PlayerStatHandler>();
-        UI_scoreBoard = PlayerManager.Instance.UI_ScoreBoard;
     }
     private void Start()
     {
         atkTypeCount = (int)Enums.BasicAttackType.Count;
+        UI_scoreBoard = GameManager.Instance.UI_ScoreBoard;
     }
     public bool GetForAnim_Critical()//PlayerAnimContorller.cs에서 호출
     {

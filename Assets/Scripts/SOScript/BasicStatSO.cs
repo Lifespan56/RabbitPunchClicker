@@ -15,5 +15,4 @@ public class BasicStatSO : ScriptableObject
     [Header("전투 능력치")]
     public int strength;
     public int agility;
-    public int criticalChance;
 }

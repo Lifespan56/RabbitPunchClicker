@@ -21,4 +21,3 @@ MonoBehaviour:
   stamina_Recovery_PerTime: 1
   strength: 1
   agility: 1
-  criticalChance: 20

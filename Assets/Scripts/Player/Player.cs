@@ -9,11 +9,11 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        PlayerManager.Instance.Player = this;
         controller = gameObject.GetComponent<PlayerInputController>();
         statHandler = gameObject.GetComponent<PlayerStatHandler>();
         animContorller = GameObject.Find("Sprite_Main").GetComponent<PlayerAnimContorller>();
         calculator = gameObject.GetComponent<Calculator>();
+        GameManager.Instance.Player = this;
     }
 
 }

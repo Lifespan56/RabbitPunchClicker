@@ -2,7 +2,7 @@
 
 public class PlayerAnimContorller : MonoBehaviour
 {
-    private Animator animator;
+    public Animator animator;
     private Calculator calculator;
     private PlayerInputController playerInputController;//bool변수하나 돌리려고 참조하는게 맞나..
 
@@ -13,17 +13,15 @@ public class PlayerAnimContorller : MonoBehaviour
     private void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
-        calculator = PlayerManager.Instance.Player.calculator;
-        playerInputController = PlayerManager.Instance.Player.controller;
     }
 
     private void Start()
     {
-        PlayerManager.Instance.Player.controller.OnBasicAttack += Anim_Attack;
+        calculator = GameManager.Instance.Player.calculator;
+        playerInputController = GameManager.Instance.Player.controller;
+        GameManager.Instance.Player.controller.OnBasicAttack += Anim_Attack;
         //전투태세 전환 다른곳에서 해야함
         animator.SetBool("IsFight", true);
-        //스탯변동시 업데이트 되어야함
-        animator.SetFloat("AttackSpeed", 1f);
     }
 
     private void Anim_Attack()
@@ -51,7 +49,7 @@ public class PlayerAnimContorller : MonoBehaviour
         calculator.AddScore(multiply);
     }
 
-    public void Animclip_StartReady()//Ready가 시작될때 클립에서 호출된다
+    public void Animclip_StartReady()//Ready가 시작될때 클립에서 호출된다 입력 통제를 품
     {
         playerInputController.IsProgress = false;
     }

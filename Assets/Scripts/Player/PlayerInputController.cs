@@ -7,6 +7,7 @@ public class PlayerInputController : MonoBehaviour
 {
     public event Action OnBasicAttack;
     public bool IsProgress;
+    public bool IsToggle;
 
     //행동중일때 클릭을 무효화 하고싶다
     //클릭>통제조건true>통제조건false로 돌려야 하는데 어느시점에서 돌려야 하는가
@@ -18,7 +19,7 @@ public class PlayerInputController : MonoBehaviour
 
     public void OnInput_LeftClick(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started && !IsProgress)
+        if (context.phase == InputActionPhase.Started && !IsProgress && !IsToggle)
         {
             IsProgress = true;
             OnBasicAttack?.Invoke();
@@ -26,5 +27,19 @@ public class PlayerInputController : MonoBehaviour
         }
         //IsProgress = false로 돌리는 시점
         //Ready시작 클립
+    }
+
+    public void OnInput_TabToggle(InputAction.CallbackContext context)
+    {
+        if(!IsToggle)
+        {
+            GameManager.Instance.UI_ShopMenu.gameObject.SetActive(true);
+            IsToggle = true;
+        }
+        else if(IsToggle)
+        {
+            GameManager.Instance.UI_ShopMenu.gameObject.SetActive(false);
+            IsToggle = false;
+        }
     }
 }

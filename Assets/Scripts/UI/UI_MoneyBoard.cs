@@ -1,26 +1,25 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class UI_ScoreBoard : MonoBehaviour
+public class UI_MoneyBoard : MonoBehaviour
 {
     private TextMeshProUGUI textMeshPro;
-    int score = 0;
+    int Money = 0;
 
     private void Awake()
     {
         textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
-        GameManager.Instance.UI_ScoreBoard = this;
+        GameManager.Instance.UI_MoneyBoard = this;
     }
 
     private void Start()
     {
-        textMeshPro.text = score.ToString();
+        textMeshPro.text = Money.ToString();
     }
 
     public void ScoreUpdate(int addScore)//Calculator AddScore(int)에서 호출
     {
-        score += addScore;
-        textMeshPro.text = score.ToString();
+        Money += addScore;
+        textMeshPro.text = Money.ToString();
     }
-
 }
