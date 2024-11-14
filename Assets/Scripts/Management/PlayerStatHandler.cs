@@ -11,8 +11,8 @@ public class PlayerStatHandler : MonoBehaviour
     //[SerializeField] private float curHealth_Recovery_Time;
     //[SerializeField] private int curHealth_Recovery_PerTime;
 
-    [field: SerializeField] public int curStamina_Max;
-    [field: SerializeField] public int curStamina;
+    [field: SerializeField] public float curStamina_Max;
+    [field: SerializeField] public float curStamina;
     [SerializeField] private int curStamina_Consum_PerAttack;
     [SerializeField] private float curStamina_Recovery_Time;
     [SerializeField] private int curStamina_Recovery_PerTime;
